@@ -1,0 +1,52 @@
+<% include ../partials/header %>    
+
+<link rel="stylesheet" href="/assets/css/produktdetaljer.css">
+
+<main>
+
+<div class="grid-container">
+       <div class="produktdetaljer1">
+              <h6>
+                  <i class="fa fa-home" style="color: #00F9B6;"></i>    Forside  \ <%= group %> \ <%= subgroup %> \ <%= vare.item.name %>
+              </h6>
+       </div>
+       <a href="/orderhistorik"id="order"></a>  
+       
+       <div class="produktdetaljer2">
+              <% include ../partials/sidenav %>  
+       </div>
+       <div class="produktdetaljer3">
+                     <div class="card1">
+                         <img src="<%= vare.item.image.fullpath %>" alt="<%= vare.item.image.filename %>">
+                     </div> 
+                     <div class="card2">
+                         <h3><%= vare.item.name %> </h3>
+                         <h5> <%= vare.item.description_long %> </h5>
+                    </div> 
+                     <div class="card3">
+                            <%= vare.item.brand %>
+                            <% if (vare.item.offerprice !== '0.00') { %>
+                                   <h4><span> Pris: DDK <%= vare.item.offerprice %></span></h4>
+                                   <% } %>
+                                   <% if (vare.item.offerprice == '0.00') { %>
+                                      <h4><span> Pris: DDK <%= vare.item.price %></span></h4>
+                                      <% } %>
+                         <input type="number" id="quantity" name="quantity"> <button type="button" onclick="addBasket('<%= vare.item.id %>')">Læg i kurv</button>
+                         <h4><%= vare.item.stock %> på lager</h4>
+                        <select name="" id="star-rating" onchange="sendRating('<%= vare.item.price %>')">
+                               <option value="">Select a rating</option>
+                               <option value="5">Excellent</option>
+                               <option value="4">Very good</option>
+                               <option value="3">Average</option>
+                               <option value="2">Poor</option>
+                               <option value="1">Terrible</option>
+                        </select>
+                    </div>
+       </div>
+</div>
+
+</main>
+
+<script src="/assets/js/produktdetaljer.js"></script>
+
+<% include ../partials/footer %>

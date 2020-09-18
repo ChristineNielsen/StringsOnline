@@ -1,0 +1,44 @@
+<!-- views/pages/index.ejs -->
+<% include ../partials/header %>    
+<link rel="stylesheet" href="/assets/css/index.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+
+<main>
+
+<div class="grid-container">
+       <div class="index1">
+              <h6>
+                  <i class="fa fa-home" style="color: #00F9B6;"></i>    Forside
+              </h6>
+       </div>
+            <a href="/orderhistorik"id="order"></a>  
+
+       <div class="index2">
+              <% include ../partials/sidenav %>  
+       </div>
+       <div class="index3">
+              <img src="/images/images/119507276_699737567282869_3147368962141321851_n.png" alt="">
+       </div>
+       <div class="index4">
+              <h2>Kundernes <span> favoritter</span></h2>
+       </div>
+
+       <div class="index5">
+       <% search.items.slice(0, 4).forEach(function(item) {
+       %> <a href="/produktdetaljer/Popular/<%= item.title %>/<%= item.id %>"><div class="card"> <img id="index-img" src="<%= item.image_fullpath %>" alt="">
+       <h3><%= item.name %></h3>
+       <h5><%= item.description_short %> <br> <span> Læs mere</span></h5>
+       <h4> Pris: DDK <%= item.price %></h4>
+       <button type="button" onclick="addBasket('<%= item.id %>')">Læg i kurv</button> 
+       </div> </a>
+       <% }); %>
+</div>
+
+</div>
+
+  
+</main>
+
+<script src="/assets/js/cookie-banner.js"></script>
+        
+<% include ../partials/footer %>

@@ -1,0 +1,47 @@
+<% include ../partials/header %>    
+
+<link rel="stylesheet" href="/assets/css/kvittering.css">
+
+<main>
+
+<div class="grid-container">
+       <div class="kvittering1">
+              <h6>
+                  <i class="fa fa-home" style="color: #00F9B6;"></i>    Forside \ Kvittering
+              </h6>
+       </div>
+       <div class="kvittering2">
+              <% include ../partials/sidenav %>  
+       </div>
+       
+       <div class="kvittering3">
+        Ordernr.<%= orders.order.id %> <br>
+        <h3>Faktureringsadresse</h3>
+        <%= orders.order.firstname %>
+        <%= orders.order.lastname %>
+        <%= orders.order.address %>
+        <%= orders.order.zipcode %>
+        <%= orders.order.city %> <br> <br>
+        <h3>Leveringsadresse</h3>
+        <%= orders.order.delivery_address %>
+        <%= orders.order.delivery_zipcode %>
+        <%= orders.order.delivery_city %> <br> <br>
+       
+        <% orders.order.orderlines.forEach(function(item) {
+            %>
+            <%= item.name %>
+            <%= item.quanitity %> <br>
+            Pris: <%= item.price %>
+
+                 <% }); %> <br>
+
+                I alt DKK <%= orders.order.total %>
+       </div>
+
+
+</div>
+
+</main>
+    
+
+<% include ../partials/footer %>

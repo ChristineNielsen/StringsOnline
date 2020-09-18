@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<nav id=nav-produkter>
+    <% produkter.items.forEach(function(item) {
+    %>
+    <ul> 
+       <li>
+              <input type="checkbox" id="list-item-<%= item.id %>">
+              <label for="list-item-<%= item.id %>"><%= item.title %></label>
+          <ul>
+           <% item.subgroups.forEach(function(item2) {
+           %>
+              <li><a href="/produktliste/<%= item.title %>/<%= item.id %>/<%= item2.title %>/<%= item2.id %>"><%= item2.title %></a></li>
+           <% }); %>
+          </ul>
+      </li>
+    </ul>
+       <% }); %>
+       <ul> 
+         <li>
+                <input type="checkbox" id="list-item-brands">
+                <label for="list-item-brands">Brands</label>
+            <ul>
+             <% brands.items.forEach(function(item2) {
+             %>
+                <li><a href="/producentside/<%= item2.id %>"><%= item2.title %></a></li>
+             <% }); %>
+            </ul>
+        </li>
+      </ul>
+ </nav>

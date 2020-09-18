@@ -1,0 +1,57 @@
+<% include ../partials/header %>    
+
+<link rel="stylesheet" href="/assets/css/producentside.css">
+
+<main>
+
+<div class="grid-container">
+       <div class="producentside1">
+              <h6>
+                  <i class="fa fa-home" style="color: #00F9B6;"></i>    Forside \ Brands \ <%= info.item.title %>
+              </h6>
+       </div>
+       <a href="/orderhistorik"id="order"></a>  
+       
+       <div class="producentside2">
+              <% include ../partials/sidenav %>  
+       </div>
+       <div class="producentside3">
+              <img src="<%= info.item.image_fullpath %>" alt="">
+       </div>
+       <div class="producentside4">
+              <h3><%= info.item.title %></h3>
+              <h5><%= info.item.description %></h5>
+       </div>
+       <div class="producentside5">
+              <h2><%= info.item.title %> produkter</h2>
+       </div>
+
+       <div class="producentside6">
+              <% info.item.products.forEach(function(item) {
+                  %>
+                       <div class="grid">
+                           <div class="card1">
+                               <a href="/produktdetaljer/Brands/<%= info.item.title %>/<%= item.id %>"> <img src="<%= item.image_fullpath %>" alt="<%= item.image_filename %>"></a>
+                           </div> 
+                           <div class="card2">
+                               <h3><%= item.name %> </h3>
+                               <h5> <%= item.description_short %> <br> <a href="/produktdetaljer/Brands/<%= info.item.title %>/<%= item.id %>">Læs mere</a> </h5>
+                          </div> 
+                           <div class="card3">
+                            <% if (item.offerprice !== '0.00') { %>
+                                   <h4><span> Pris: DDK <%= item.offerprice %></span></h4>
+                                   <% } %>
+                                   <% if (item.offerprice == '0.00') { %>
+                                      <h4><span> Pris: DDK <%= item.price %></span></h4>
+                                      <% } %>
+                               <button type="button" onclick="addBasket('<%= item.id %>')">Læg i kurv</button>
+                               <h4><%= item.stock %> på lager</h4>
+                          </div>
+                       </div>
+                       <% }); %>
+             </div>
+</div>
+
+</main>
+
+<% include ../partials/footer %>

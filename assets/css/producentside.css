@@ -1,0 +1,225 @@
+/*BLOCKS START*/
+.producentside1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-column: 1 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  border: 0.5px solid #393939;
+}
+
+.producentside1 h6 {
+  color: #00F9B6;
+  padding: 0.5vw;
+}
+
+#order {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-column: 11 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  color: #00F9B6;
+  padding: 0.5vw;
+  font-size: 0.7em;
+}
+
+.producentside2 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  grid-row: 2 / 5;
+  border: 1px solid #1F5E5B;
+  background-color: #0A1D1C;
+}
+
+.producentside3 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.producentside3 img {
+  background-color: white;
+}
+
+.producentside4 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 8;
+  grid-column: 5 / 13;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  color: white;
+}
+
+.producentside4 h3 {
+  font-weight: 600;
+}
+
+.producentside5 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 10;
+  grid-column: 3 / 13;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  color: #AFAFAF;
+}
+
+.producentside6 {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 10;
+  grid-column: 3 / 13;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+.producentside6 .grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  padding: 1vw;
+  color: white;
+  border: 1px solid #393939;
+}
+
+.producentside6 .grid .card1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1 / 5;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+.producentside6 .grid .card1 img {
+  background-color: white;
+  margin-top: 1vw;
+}
+
+.producentside6 .grid .card2 {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 5;
+  grid-column: 5 / 10;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  margin-left: 4vw;
+}
+
+.producentside6 .grid .card2 h3 {
+  margin-bottom: 1vw;
+}
+
+.producentside6 .grid .card2 h5 {
+  margin-top: 0;
+}
+
+.producentside6 .grid .card2 h5 a {
+  color: #00F9B6;
+}
+
+.producentside6 .grid .card3 {
+  -ms-grid-column: 10;
+  -ms-grid-column-span: 3;
+  grid-column: 10 / 13;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  margin-left: 4vw;
+}
+
+.producentside6 .grid .card3 button {
+  background-color: #D10061;
+  color: white;
+  width: 82%;
+  height: 40px;
+  margin: 1.5vw 0 1vw 0.5vw;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.producentside6 .grid .card3 h4 {
+  padding: 0.3vw;
+}
+
+.producentside6 .grid .card3 h4 span {
+  border: 1px solid #393939;
+  padding: 0.5vw;
+}
+
+/*BLOCKS END*/
+@media only screen and (max-width: 880px) {
+  .producentside2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .producentside3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  .producentside4 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  .producentside5 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  .producentside6 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  .producentside6 .grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    padding: 1vw;
+    color: white;
+    border: 1px solid #393939;
+  }
+  .producentside6 .grid .card1 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  .producentside6 .grid .card1 img {
+    width: 70%;
+    margin: 2vw 0 1vw 4vw;
+  }
+  .producentside6 .grid .card2 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .producentside6 .grid .card3 {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 12;
+    grid-column: 1 / 13;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+}
+/*# sourceMappingURL=producentside.css.map */

@@ -1,0 +1,45 @@
+<% include ../partials/header %>   
+
+<link rel="stylesheet" href="/assets/css/produktliste.css">
+
+<main>
+
+<div class="grid-container">
+       <div class="produktliste1">
+              <h6>
+                  <i class="fa fa-home" style="color: #00F9B6;"></i>    Forside \ Search \ <%= keyword %>
+              </h6>
+       </div>
+       <a href="/orderhistorik"id="order"></a>  
+       
+       <div class="produktliste2">
+        <% include ../partials/sidenav %>  
+       </div>
+
+       <div class="produktliste4" id="produktliste4">
+        <% search.items.forEach(function(item) {
+            %>
+                 <div class="grid">
+                     <div class="card1">
+                         <a href="/produktdetaljer/Brand/<%= item.title %>/<%= item.id %>"> <img src="<%= item.image_fullpath %>" alt="<%= item.image_filename %>"></a>
+                     </div> 
+                     <div class="card2">
+                         <h3><%= item.name %> </h3>
+                         <h5> <%= item.description_short %> <br> <a href="/produktdetaljer/Brand/<%= item.title %>/<%= item.id %>">Læs mere</a> </h5>
+                    </div> 
+                     <div class="card3">
+                         <h4>Pris: DDK <%= item.price %></h4>
+                         <button type="button" onclick="addBasket('<%= item.id %>')">Læg i kurv</button>
+                         <h4><%= item.stock %> på lager</h4>
+                    </div>
+                 </div>
+                 <% }); %>
+       </div>
+</div>
+
+        
+</main>
+
+<script src="/assets/js/produktliste.js"></script>
+
+<% include ../partials/footer %>

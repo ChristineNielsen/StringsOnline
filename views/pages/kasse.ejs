@@ -1,0 +1,121 @@
+<% include ../partials/header %>    
+
+<link rel="stylesheet" href="/assets/css/kasse.css">
+
+<main>
+
+<div class="grid-container">
+       <div class="kasse1">
+              <h6>
+                  <i class="fa fa-home" style="color: #00F9B6;"></i>    Forside \ Kasse
+              </h6>
+       </div>
+       <a href="/orderhistorik"id="order"></a>  
+
+       <div class="kasse2">
+        <% include ../partials/sidenav %>  
+       </div>
+
+       <div class="kasse3">
+         <h2>Kasse</h2>
+       </div>
+
+       <div class="kasse4">
+         <h4>Fakturerings- & leveringsadresse</h4>
+       </div>
+
+       <div class="kasse5">
+        <h4>Email & telefon</h4>
+       </div>
+
+       <div class="kasse6">
+        <h4>Betalingsmetode</h4>
+       </div>
+
+       <form method="POST" id="form" class="grid-container">
+              <div class="form1">
+               <input type="text" name="firstname" id="firstname" placeholder="Fornavn" value="">
+              </div>
+
+              <div class="form2">
+               <input type="text" name="lastname" id="lastname" placeholder="Efternavn" value="">
+              </div>
+
+              <div class="form3">
+              <input type="text" name="adresse" id="adresse" placeholder="Gade/vej og husnummer"  value="">
+              </div>
+
+              <div class="form4">
+              <input type="number" name="postnummer" id="postnummer" placeholder="Postnr." value="">
+              </div>
+
+              <div class="form5">
+              <input type="text" name="by" id="by" placeholder="By" value="">
+              </div>
+
+              <div class="form6">
+              <input onclick="show()" type="checkbox" class="checkbox" name="accept" id="accept" value="">
+              <label for="accept">Anden leveringsadresse</label> 
+              </div>
+
+              <div class="form7">
+               <input type="email" name="email" id="email" placeholder="Emailadresse"  value="">
+              </div>
+
+              <div class="form8">
+               <input type="text" name="number" id="number" placeholder="Telefonnummer" value="">
+              </div>
+
+              <div class="form9">
+                <input type="radio" id="bank" name="betaling" value="0">
+                <label for="bank">Bankoverførsel</label>
+              </div>
+
+              <div class="form10">
+                <input type="radio" id="kredit" name="betaling" value="1">
+                <label for="kredit">Kreditkort (MasterCard, VISA)</label>
+            </div>
+
+            <div class="form11">
+              <input type="text" name="kortnummer" id="kortnummer" placeholder="Kortnummer" value="">
+            </div>
+
+            <div class="form12">
+              <input type="number" name="month" id="month" placeholder="Måned" value="">
+            </div>
+
+            <div class="form13">
+              <input type="number" name="year" id="year" placeholder="År" value="">
+            </div>
+
+            <div class="form14">
+              <input type="number" name="kontrolciffer" id="kontrolciffer" placeholder="Kontrolciffer" value="">
+            </div>
+
+            <div class="form15">
+              <input type="text" name="indehaver" id="indehaver" placeholder="Kort indehaver" value="">
+            </div>
+            
+            <div class="form16">
+              <button type="button" id="send">BETAL</button>
+            </div>
+
+            <div id="1" class="form17 hide">
+              <input type="text" name="adresse2" id="adresse2" placeholder="Gade/vej og husnummer"  value="">
+              </div>
+
+              <div id="2" class="form18 hide">
+              <input type="number" name="postnummer2" id="postnummer2" placeholder="Postnr." value="">
+              </div>
+
+              <div id="3" class="form19 hide">
+              <input type="text" name="by2" id="by2" placeholder="By" value="">
+              </div>
+       </form>
+</div>
+
+</main>
+
+<script src="/assets/js/kasse.js"></script>
+
+<% include ../partials/footer %>

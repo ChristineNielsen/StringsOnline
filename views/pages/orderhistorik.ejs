@@ -1,0 +1,36 @@
+<% include ../partials/header %>   
+
+<link rel="stylesheet" href="/assets/css/orderhistorik.css">
+
+<main>
+
+<div class="grid-container">
+       <div class="orderhistorik1">
+              <h6>
+                  <i class="fa fa-home" style="color: #00F9B6;"></i>    Forside \ Orderhistorik
+              </h6>
+       </div>
+       <a href="/orderhistorik"id="order"></a>  
+       
+       <div class="orderhistorik2">
+              <% include ../partials/sidenav %>  
+       </div>
+       <div class="orderhistorik3">
+              <% orders.items.forEach(function(item) {
+                     %>
+                              <div class="card1">
+                                   <h4><%= item.created %></h4>
+                              </div> 
+                              <div class="card2">
+                                  <h4>DKK <%= item.total %> </h4>
+                             </div> 
+                              <div class="card3">
+                                  <h4>Ordernr. <span><%= item.id %></span></h4>
+                             </div>
+                          <% }); %>
+       </div>
+</div>
+
+</main>
+
+<% include ../partials/footer %>

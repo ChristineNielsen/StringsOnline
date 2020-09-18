@@ -1,0 +1,29 @@
+.cookie-banner {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    opacity: 0.8;  
+    padding-top: 4vw;   
+}
+
+.cookie-container {
+    margin: auto;
+    width: 70%;
+    color: white;
+}
+
+.cookie-container p {
+    font-size: 13px;
+    padding: 1vw 1vw 1vw 0;
+}
+
+#cookie-accept {
+    margin-top: 5px;
+    padding: 0.5vw;
+    width: 90px;
+    background-color: #00F9B6;
+    border: none;
+    font-weight: 600;
+}

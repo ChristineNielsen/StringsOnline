@@ -1,0 +1,42 @@
+<!-- views/partials/header.ejs -->
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <meta charset="UTF-8">
+        <title>StringsOnline</title>
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+
+    <header>
+
+        <div class="grid-container">
+            <div class="header1">
+                <h6> 
+                <p><i class="fa fa-envelope" style="color: white;"></i>  sales@stringsonline.com</p>
+                <p><i class="fa fa-phone" style="color: white;"></i>   +45 98 12 22 68</p> 
+                <p><a href="/kurv"><i class="fa fa-shopping-basket fa-lg" style="color: white;"></i></a></p>
+                </h6>
+            </div>
+            <div class="header2">
+                <img src="/images/images/header-bg.png" alt="header-png">
+                <nav id="header-nav">
+                    <ul>
+                        <li><a href="/">Forside</a></li>
+                        <li><a href="#">Salgs- og handlesbetingelser</a></li>
+                        <li><a href="/login"><button type="button" id="login-button">Login</button></a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header3">
+                <input type="text" id="search" placeholder="Indtast søgeord">
+                <button type="button" onclick="linkToSearch()" ><i class="fa fa-arrow-right"></i></button>
+            </div>
+
+        </div>
+
+    </header>
+
+    
